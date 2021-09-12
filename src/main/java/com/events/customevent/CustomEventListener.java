@@ -10,6 +10,9 @@ public class CustomEventListener implements ApplicationListener<CustomEvent> {
 
 	Logger log = LoggerFactory.getLogger(CustomEventListener.class);
 	
+	/**
+	 * This is asynchronous because of the AsynchronousEventsConfig file
+	 */
 	@Override
 	public void onApplicationEvent(CustomEvent event) {
 		log.info("Event handled {}", event);

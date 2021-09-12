@@ -15,7 +15,7 @@ public class PublisherEvent {
 	private ApplicationEventPublisher applicationEventPublisher;
 	
 	public void publishCustomEvent(final String message) {
-		log.info("Publishing event {}", message);
+		log.info("Publishing event {}", message); 
 		CustomEvent customEvent = new CustomEvent(this, message);
 		applicationEventPublisher.publishEvent(customEvent);
 	}
